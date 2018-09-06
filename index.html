@@ -2,7 +2,7 @@
 <!-- NOTE: the string 'TODO' appears everywhere you need to fill in information. -->
 <html>
 <head>
-<title>Sliding Ball</title>
+<title>Space Run</title>
 <!-- NOTE: this CSS sets up the ".figure" class to center images, and instructs images in ".figure"s to have space around them and to render crisp pixel edges when scaled [e.g. for retina displays]. -->
 <style>
 .figure {
@@ -15,34 +15,30 @@
 </style>
 </head>
 <body>
-<h1>Sliding Ball</h1>
-<p>You are sliding or merging balls to clean up the board. The fewer steps you spend on it, the higher score you will get.</p>
+<h1>Space Run</h1>
+<p>You are trying to find the essential battery(or coca colar) as quick as possible to surrive in the space station. But be aware of those guarding rotbot dogs.</p>
 <!-- the <div> wrapping this image centers it on the page. -->
 <!-- TODO: drawing showing the main view of the game during play -->
 <div class="figure">
-<img src="sliding-ball.png" />
+	<img src="spacerun-graph.png" alt="Trulli">
+	<figcaption>Fig.1 - you are the one start from left. Try to get the battery without being caught be dog!</figcaption>
 </div>
-<p>There's two types of balls randomly placed on a 4x4 board. The player use the arrow keys to slide this balls, which will make all balls in onr line move in the same indicated direction. The player can also apply a powerful slide which means if there's any balls of the same type in the line they can merge into one. For every game, the player is going to make the balls remain on board to 2 as fast as they can.</p>
+<p>There are 10 plaforms connected to space station. Every few seconds a new battery will appear on one of platforms and last for several seconds. You have rush to battery before running out of your energy. Meanwhile a robot dog will chase you and cause damage to you when bites you.</p>
 
 <h2>Gameplay</h2>
-<p><b>Start:</b> 4x4 balls will be random placed on a 4x4 board. (To make sure player can have only 2 balls on board we can use the inverse progress to generate the whole map from 2.)</p>
-<p><b>Movement:</b> When the arrow keys are pressed all balls in selected line slide in the indicated direction until they are blocked by either other ball with different color or wall.<br>
-If player hold the Ctrl to perform a slide, it will become a powerful slide, in which balls with the same color in a line of sliding direction will get merged and disappear until the last one</p>
+
+Player's energy keep losing after game start. He has to use keyboard to control player move to the energy battery.
+If he has no more energy before finding next battery or killed by robot dog, game ends.
+
 <!-- TODO: illustrate your descriptions with more drawings -->
-<div class="figure">
-	<img src="before-slide.png" alt="Trulli">
-	<figcaption>Fig.1 - board before apply any slide.(we illustrate three slides at one figure)</figcaption>
-	<img src="after-normal-slide.png" alt="Trulli">
-	<figcaption>Fig.2 - board after apply normal slide.</figcaption>
-	<img src="after-powerful-slide.png" alt="Trulli">
-	<figcaption>Fig.3 - board after apply powerful slide.</figcaption>
-</div>
-<p><b>End:</b>when there's only 2 balls(of different color) remaining on the board, game finished. We can check the step player costs to calculate the score. Or if player can't further remove balls(they've already completely blocked)</p>
 
 <h2>Assets</h2>
-<p>It can be done with the same resources from <a href="http://graphics.cs.cmu.edu/courses/15-466-f18/game0-designs/default/stickochet.blend">stickochet.blend</a> for the game.</p>
+<p>It can be done with the same resources from <a href="space-dog.blend">space-dog.blend</a> for the game.</p>
 <div class="figure">
-<img src="assets.jpg">
+	<img src="spacerun-level.png">
+</div>
+<div class="figure">
+	<img src="spacerun-dog.png">
 </div>
 
 </body>
